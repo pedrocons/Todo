@@ -5,8 +5,21 @@ class todolistpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: TextField(),
+    return SafeArea(
+      child: Scaffold(
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: 'E-mail : ',
+                hintText: 'Example@example.com',
+                border: InputBorder.none,
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
